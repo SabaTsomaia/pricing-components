@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: rgb(244, 244, 244);
+}
+.container{
+  margin: 0 auto;
+  width: 1100px;
+  max-width: 100%;
+}
+header{
+    margin: 40px 0;
+}
+header h1{
+    margin: 0 0 25px 0;
+    text-align: center;
+    opacity: 0.6;
+}
+.header-toggle-button{  
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header-toggle-button p{
+    margin: 0 10px;
+    opacity: 0.4;
+}
+/** toggle button ************/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: hsl(237, 63%, 64%);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* End of toggle button ***********/
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+.main-container-container{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    background-color: white;
+    box-shadow:  3px 5px 15px rgba(0, 0, 0, 0.1);
+    height: 420px;
+    margin: 0 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.card h2    {
+    padding-bottom: 6%;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+.card h3{
+    font-size: 45px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.card p{
+    border-top: 1.3px solid hsl(0, 0%, 89%);
+    margin: 0 12px;
+    padding-bottom: 7.5%;
+    padding-top: 7.5%;
+    opacity: 0.9;
+}
+#last-p{
+    border-bottom: 1.3px solid hsl(0, 0%, 89%);
+}
+.card-2{
+    top: -20px;
+    position: relative;
+    height: 470px;
+    background-color: hsl(237, 63%, 64%);
+}
+.card-2 h2    {
+    padding-bottom: 8%;
+    margin-top: 38px;
+    opacity: 0.7;
+}
+#button{
+    margin-top: 15px;
+    cursor: pointer;
+    width: 240px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #2196F3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    color: #2782cc;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+#button-2{
+    margin-top: 25px;
+    width: 240px;
+    height: 40px;
+    background-color: hsl(237, 63%, 64%);
+    border: 1px solid white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+@media (max-width: 850px){
+    header{
+        margin: 10px 0;
+    }
+    .main-container{
+        flex-direction: column;
+    }
+    .card h2{
+        padding: 0;
+    }
+    .card p{
+        padding: 30px 0;
+    }
+    .card{
+        height: 450px;
+        margin: 0 0 0 0;
+    }
+    .card-2{
+        top: 30px;
+        height: 460px;
+    }
+    .card-3{
+        top: 50px;
+        position: relative;
+    }
+}
